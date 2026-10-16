@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Devii Ji 🌷</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;min-height:100vh;overflow:hidden;
+ background:linear-gradient(180deg,#170d30,#451b48,#9c4168);
+ color:#fff4fb;font-family:Georgia,serif;
+ display:flex;flex-direction:column;align-items:center;
+ justify-content:center;text-align:center;
+}
+h1{font-size:clamp(32px,8vw,54px);font-weight:normal;
+ text-shadow:0 0 22px #ff9dcc;margin:0 15px 12px}
+p{font-size:17px;letter-spacing:1px;margin:0 18px}
+.garden{height:300px;width:100%;max-width:520px;
+ display:flex;align-items:flex-end;justify-content:center;
+ gap:clamp(12px,5vw,35px);padding-bottom:20px}
+.tulip{height:220px;width:65px;position:relative;
+ transform-origin:bottom;animation:sway 3s ease-in-out infinite}
+.tulip:nth-child(2){height:270px;animation-delay:-1s}
+.tulip:nth-child(3){height:235px;animation-delay:-2s}
+.tulip:nth-child(4){height:260px;animation-delay:-.5s}
+.stem{position:absolute;bottom:0;left:31px;width:4px;
+ height:145px;background:linear-gradient(#a9df83,#377d57);
+ border-radius:10px}
+.leaf{position:absolute;width:29px;height:65px;
+ background:linear-gradient(135deg,#b5e995,#28764e);
+ border-radius:100% 0 100% 0;bottom:40px;left:5px;
+ transform:rotate(-20deg)}
+.leaf.right{left:31px;bottom:72px;transform:rotate(35deg) scaleX(-1)}
+.flower{position:absolute;top:20px;left:8px;width:50px;height:66px}
+.petal{position:absolute;width:25px;height:48px;
+ background:linear-gradient(160deg,#ffd1e7,#ff5e9d 75%);
+ border-radius:70% 70% 35% 35%;left:13px;top:0;
+ transform-origin:bottom center;box-shadow:0 0 12px #ff86ba66}
+.petal:nth-child(1){transform:rotate(-32deg);left:2px;top:8px}
+.petal:nth-child(2){transform:rotate(-13deg);left:9px;top:1px}
+.petal:nth-child(3){transform:rotate(12deg);left:18px;top:1px}
+.petal:nth-child(4){transform:rotate(32deg);left:24px;top:8px}
+.petal:nth-child(5){background:linear-gradient(#ffe1ef,#d92e78);height:43px;left:13px;top:8px}
+@keyframes sway{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(6deg)}}
+.glow{position:fixed;width:5px;height:5px;border-radius:50%;
+ background:#ffe2f2;box-shadow:0 0 12px #ffb6df;
+ animation:float 7s linear infinite;opacity:.7}
+@keyframes float{from{transform:translateY(20vh);opacity:0}
+ 20%{opacity:.8}to{transform:translateY(-110vh);opacity:0}}
+button{margin-top:12px;padding:13px 23px;border:1px solid #ffc4e0;
+ border-radius:30px;background:#ffffff18;color:white;
+ font-size:16px;cursor:pointer}
+#message{margin:18px 20px 0;max-width:350px;line-height:1.7;
+ min-height:50px;color:#ffe0f0}
+</style>
+</head>
+<body>
+<h1>For Devii Ji 🌷</h1>
+<p>A little garden, made just for you ✨</p>
+
+<div class="garden">
+ <div class="tulip"><div class="stem"></div><div class="leaf"></div><div class="leaf right"></div><div class="flower"><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i></div></div>
+ <div class="tulip"><div class="stem"></div><div class="leaf"></div><div class="leaf right"></div><div class="flower"><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i></div></div>
+ <div class="tulip"><div class="stem"></div><div class="leaf"></div><div class="leaf right"></div><div class="flower"><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i></div></div>
+ <div class="tulip"><div class="stem"></div><div class="leaf"></div><div class="leaf right"></div><div class="flower"><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i></div></div>
+</div>
+
+<button onclick="document.getElementById('message').textContent='You make ordinary moments feel magical. This little garden is just for you. 🌷💗'">A little surprise 💗</button>
+<div id="message">Some flowers are special, just like the person they are for.</div>
+
+<script>
+for(let i=0;i<24;i++){
+ let s=document.createElement('span');s.className='glow';
+ s.style.left=Math.random()*100+'%';
+ s.style.animationDelay=Math.random()*7+'s';
+ s.style.animationDuration=(5+Math.random()*7)+'s';
+ document.body.appendChild(s);
+}
+</script>
+</body>
+  </html>
+   
